@@ -19,6 +19,15 @@ function indent() {
   esac
 }
 
+#Installing needed Tools for PDF Generation
+echo "Gonna install Tex now.. this will take some time"
+apt-get install php-cli pandoc texlive texlive-latex-extra texlive-lang-german texlive-fonts-extra
+
+#Running the Gen PDF Script!
+chmod +x ./generate-pdfs.sh
+./generate-pdfs.sh
+
+#Installing Ruby
 if [[ `ruby -v` == "ruby 1"* ]]; then
   echo "-----> Installing Ruby 2.2.1"
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
