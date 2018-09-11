@@ -21,10 +21,10 @@ function indent() {
 
 #Installing needed Tools for PDF Generation
 echo "Gonna install Tex now.. this will take some time"
-apt-get install php-cli pandoc texlive texlive-latex-extra texlive-lang-german texlive-fonts-extra
+sudo apt-get install php-cli pandoc texlive texlive-latex-extra texlive-lang-german texlive-fonts-extra
 
 #Running the Gen PDF Script!
-chmod +x ./generate-pdfs.sh
+sudo chmod +x ./generate-pdfs.sh
 ./generate-pdfs.sh
 
 #Installing Ruby
