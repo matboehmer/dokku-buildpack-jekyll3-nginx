@@ -27,14 +27,14 @@ chmod +x ./generate-pdfs.sh
 
 #Installing Ruby
 if [[ `ruby -v` == "ruby 1"* ]]; then
-  echo "-----> Installing Ruby 2.2.1"
+  echo "-----> Installing Ruby 2.6.3"
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   git clone https://github.com/garnieretienne/rvm-download.git ~/.rbenv/plugins/rvm-download
   export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-  rbenv download 2.2.1
+  rbenv download 2.6.3
   rbenv rehash
-  rbenv local 2.2.1
-  rbenv global 2.2.1
+  rbenv local 2.6.3
+  rbenv global 2.6.3
 else
   echo "-----> Using `ruby -v`"
 fi
