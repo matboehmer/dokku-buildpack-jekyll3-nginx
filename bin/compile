@@ -87,10 +87,10 @@ fi
 
 
 #Running the Gen PDF Script!
-cd $BUILD_DIR
-ls
-chmod +x ./generate-pdfs.sh
-./generate-pdfs.sh
+#cd $BUILD_DIR
+#ls
+#chmod +x ./generate-pdfs.sh
+#./generate-pdfs.sh
 
 
 
