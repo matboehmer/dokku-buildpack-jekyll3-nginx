@@ -19,12 +19,6 @@ function indent() {
   esac
 }
 
-#Running the Gen PDF Script!
-cd $BUILD_DIR
-ls
-chmod +x ./generate-pdfs.sh
-./generate-pdfs.sh
-
 #Installing Ruby
 #if [[ `ruby -v` == "ruby 1"* ]]; then
   echo "-----> Installing Ruby 2.5.1"
@@ -89,6 +83,16 @@ $BUILD_DIR/.gems/bin/jekyll build | indent
 if [ -f sass/style.scss ]; then
   $BUILD_DIR/.gems/bin/sass sass/style.scss style.css | indent
 fi
+
+
+
+#Running the Gen PDF Script!
+cd $BUILD_DIR
+ls
+chmod +x ./generate-pdfs.sh
+./generate-pdfs.sh
+
+
 
 # build a startup script
 cat <<EOF >"$BUILD_DIR/bin/start_nginx"
